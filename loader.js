@@ -13,6 +13,7 @@
 
     const folderPath = (path) => path.substring(0, path.length - path.split('/').pop().length);
     let scriptPath = (typeof window.EJS_pathtodata === "string") ? window.EJS_pathtodata : folderPath((new URL(document.currentScript.src)).pathname);
+    alert(window.EJS_pathtodata);
     if (!scriptPath.endsWith('/')) scriptPath+='/';
     //console.log(scriptPath);
     function loadScript(file) {
